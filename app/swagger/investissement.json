@@ -1,0 +1,119 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "EndPoint de Invertissement ",
+        "version": "0.1"
+    },
+    "paths": {
+        "/api/investissement/liste": {
+            "get": {
+                "summary": "Cette route permet de lister les investissement d'un bailleur donné",
+                "operationId": "7e9e389bd2a03d77973ba1e151b8abf5",
+                "responses": {
+                    "200": {
+                        "description": "succes"
+                    }
+                }
+            }
+        },
+        "/api/investissement/{projet}": {
+            "post": {
+                "summary": "Cette route permet d'ajouter un investissement",
+                "operationId": "a2e1bb12187fe9dc3b555fb20961b0f8",
+                "responses": {
+                    "201": {
+                        "description": "Investissement Créer avec succès"
+                    }
+                }
+            }
+        },
+        "/api/investissement/{id}": {
+            "get": {
+                "summary": "Cette route permet de consulter le detail d'un investissement",
+                "operationId": "dce81916ff1d4f4562525161a9fa122b",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID de l'incestissement",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "succes"
+                    }
+                }
+            }
+        },
+        "/api/refuserProposition/{id}": {
+            "put": {
+                "summary": "Cette route permet à un porteur de projet de refuser un investissement",
+                "operationId": "cffb04cc22df993c938c5cc22c8da85b",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID de l'investissement",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "succes"
+                    }
+                }
+            }
+        },
+        "/api/accepterProposition/{id}": {
+            "put": {
+                "summary": "Cette route permet à un porteur de projet d'accepter un investissement",
+                "operationId": "2ce5abe6074753f3635a46e3d79d856a",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID de l'incestissement",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "succes"
+                    }
+                }
+            }
+        },
+        "/api/supprimer/investissement/{id}": {
+            "delete": {
+                "summary": "Cette route permet de supprimer un investissement specifique",
+                "operationId": "f00adbd398a3482c1ca9b9a2b1d38670",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID de l'incestissement",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "succes"
+                    }
+                }
+            }
+        }
+    }
+}

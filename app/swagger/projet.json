@@ -1,0 +1,104 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "EndPoint de Projet ",
+        "version": "0.1"
+    },
+    "paths": {
+        "/api/projets": {
+            "get": {
+                "summary": "Cette route permet de lister tous les projets",
+                "operationId": "1da3223509a51ade6de240dc7525a1db",
+                "responses": {
+                    "200": {
+                        "description": "succes"
+                    }
+                }
+            },
+            "post": {
+                "summary": "Cette route permet de créer des projet",
+                "operationId": "79b3d81d05c3937ccb391d407b24cd03",
+                "responses": {
+                    "201": {
+                        "description": "le projet a été creer avec succès"
+                    }
+                }
+            }
+        },
+        "/api/projetsDisponibles": {
+            "get": {
+                "summary": "Cette route permet de lister tous les projets dispobiles",
+                "operationId": "c01d597d456d6636e3c9978f20ca892f",
+                "responses": {
+                    "200": {
+                        "description": "succes"
+                    }
+                }
+            }
+        },
+        "/api/projets/{projet}": {
+            "get": {
+                "summary": "Cette route permet de voir le detail d'un projet",
+                "operationId": "955140da2c17751b60bf48ca3addacf2",
+                "parameters": [
+                    {
+                        "name": "projet",
+                        "in": "path",
+                        "description": "ID du projet",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "succes"
+                    }
+                }
+            },
+            "put": {
+                "summary": "Cette route permet de modifier un projet specifique",
+                "operationId": "b8e04b5e7602f75e0e1b45c2de0e617c",
+                "parameters": [
+                    {
+                        "name": "projet",
+                        "in": "path",
+                        "description": "ID du projet",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "succes"
+                    }
+                }
+            }
+        },
+        "/api/projet/{projet}": {
+            "delete": {
+                "summary": "Cette route permet de supprimer un projet donnée",
+                "operationId": "cb47b7e7197b0c40f090ebc35b3ff9c4",
+                "parameters": [
+                    {
+                        "name": "projet",
+                        "in": "path",
+                        "description": "ID du projet",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "succes"
+                    }
+                }
+            }
+        }
+    }
+}

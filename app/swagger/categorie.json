@@ -1,0 +1,75 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "EndPoint de Categorie ",
+        "version": "0.1"
+    },
+    "paths": {
+        "/api/listeCtagorie": {
+            "get": {
+                "summary": "Lister les categories et afficher leur nombre",
+                "operationId": "154ba84e9a21d17d5081116d1b547334",
+                "responses": {
+                    "200": {
+                        "description": "succes"
+                    }
+                }
+            }
+        },
+        "/api/ajouterCategorie": {
+            "post": {
+                "summary": "Cette route permet d'ajouter une categorie",
+                "operationId": "e14fec72476af8e624f49586f94f2023",
+                "responses": {
+                    "201": {
+                        "description": "Enregistrement Effectué avec succès"
+                    }
+                }
+            }
+        },
+        "/api/ModifierCategorie/{id}": {
+            "put": {
+                "summary": "Cette route permet de modifier une categorie",
+                "operationId": "e4121bdd5e5c233e5ee5569cbda7e989",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID de la categorie",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Succes"
+                    }
+                }
+            }
+        },
+        "/api/SupprimerCategorie/{id}": {
+            "delete": {
+                "summary": "Cette route permet de supprimer une categorie",
+                "operationId": "f02ac0e8c7fe6050ca44788310a1e9c5",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID de la categorie",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Succes"
+                    }
+                }
+            }
+        }
+    }
+}

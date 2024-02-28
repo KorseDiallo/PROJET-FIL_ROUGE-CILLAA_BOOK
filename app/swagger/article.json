@@ -1,0 +1,97 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "endPoind de article",
+        "version": "0.1"
+    },
+    "paths": {
+        "/api/voirArticle": {
+            "get": {
+                "summary": "liste de tout les articles et afficher le nombre d'article",
+                "operationId": "2fd5c41723d83580e1aff71e8bf0a0cc",
+                "responses": {
+                    "200": {
+                        "description": "succes"
+                    }
+                }
+            }
+        },
+        "/api/ajouterArticle": {
+            "post": {
+                "summary": "ajouter un article",
+                "operationId": "b2a843b387f3242933d4def81a064198",
+                "responses": {
+                    "201": {
+                        "description": "enregistrer avec succes"
+                    }
+                }
+            }
+        },
+        "/api/detailArticle/{article}": {
+            "get": {
+                "summary": "details d'un article",
+                "operationId": "bd4b55aa18a0796fa817af5fcfd8317e",
+                "parameters": [
+                    {
+                        "name": "article",
+                        "in": "path",
+                        "description": "ID de l'article",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "succes"
+                    }
+                }
+            }
+        },
+        "/api/modifierArticle/{article}": {
+            "put": {
+                "summary": "modifier un article",
+                "operationId": "39c96aac12f48f3255d1b0b2ece3cede",
+                "parameters": [
+                    {
+                        "name": "article",
+                        "in": "path",
+                        "description": "ID de l'article",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "succes"
+                    }
+                }
+            }
+        },
+        "/api/supprimerArticle/{article}": {
+            "delete": {
+                "summary": "supprimer un article",
+                "operationId": "41f0ba706cc30174347c97d33e7a9dc5",
+                "parameters": [
+                    {
+                        "name": "article",
+                        "in": "path",
+                        "description": "ID de l'article",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "succes"
+                    }
+                }
+            }
+        }
+    }
+}

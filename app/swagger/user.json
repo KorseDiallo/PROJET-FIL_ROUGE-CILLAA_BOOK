@@ -1,0 +1,196 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "endPoind de user",
+        "version": "0.1"
+    },
+    "paths": {
+        "/api/users": {
+            "get": {
+                "summary": "liste de tout les users",
+                "operationId": "d64c69c227bcaa94189f8552f9336c55",
+                "responses": {
+                    "200": {
+                        "description": "succes"
+                    }
+                }
+            }
+        },
+        "/api/listePorteurs": {
+            "get": {
+                "summary": "liste des porteurs et leur nombre de projets par l'admin",
+                "operationId": "d812a8043657e96841cff72fd5529145",
+                "responses": {
+                    "200": {
+                        "description": "succes"
+                    }
+                }
+            }
+        },
+        "/api/listeBailleurs": {
+            "get": {
+                "summary": "liste des bailleurs et leur nombre de projets par l'admin",
+                "operationId": "8b9685b83a62906cec5dd0e3e7f9d6a0",
+                "responses": {
+                    "200": {
+                        "description": "succes"
+                    }
+                }
+            }
+        },
+        "/api/dashboardBailleur": {
+            "get": {
+                "summary": "Dashoard du bailleur avec ces information et les investissements qu'il a proposé",
+                "operationId": "6dc7eb02590c4a589aa6bff0e440bbcd",
+                "responses": {
+                    "200": {
+                        "description": "succes"
+                    }
+                }
+            }
+        },
+        "/api/dashboardPorteur": {
+            "get": {
+                "summary": "Dashoard du porteur avec ces information et ses projets",
+                "operationId": "d4c784d13d7cc7eb349dba3d90f8c8f7",
+                "responses": {
+                    "200": {
+                        "description": "succes"
+                    }
+                }
+            }
+        },
+        "/api/dashboardAdmin": {
+            "get": {
+                "summary": "Dashoard de l'admin avec ces information",
+                "operationId": "780be35a389bb2c87733b31b3c610752",
+                "responses": {
+                    "200": {
+                        "description": "succes"
+                    }
+                }
+            }
+        },
+        "/api/login": {
+            "post": {
+                "summary": "connexion d'un user",
+                "operationId": "1c39d5ce817e63668f8c22239b69c7a7",
+                "responses": {
+                    "200": {
+                        "description": "succes"
+                    }
+                }
+            }
+        },
+        "/api/inscription": {
+            "post": {
+                "summary": "inscription d'un user",
+                "operationId": "aa7061a5ab88e0bd0580583abcdd692f",
+                "responses": {
+                    "200": {
+                        "description": "enregistrer succes"
+                    }
+                }
+            }
+        },
+        "/api/logout": {
+            "post": {
+                "summary": "deconnexion d'un user",
+                "operationId": "d1d530ac6b6494cf8ed1069a007aa77b",
+                "responses": {
+                    "200": {
+                        "description": "decconnexion succes"
+                    }
+                }
+            }
+        },
+        "/api/info/{id}": {
+            "get": {
+                "summary": "information de profil d'un user",
+                "operationId": "c754d6837b94333757bd85afe87168db",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID de l'utilisateur",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "succes"
+                    }
+                }
+            }
+        },
+        "/api/bloquerUser{id}": {
+            "post": {
+                "summary": "Bloquer un user par l'admin",
+                "operationId": "42dc47ad36d1dd78035994aca4fbd7ba",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID de l'utilisateur",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "succes"
+                    }
+                }
+            }
+        },
+        "/api/debloquerUser{id}": {
+            "post": {
+                "summary": "Débloquer un user par l'admin",
+                "operationId": "d58da2efb6f0870b63798743793a4cf4",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID de l'utilisateur",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "succes"
+                    }
+                }
+            }
+        },
+        "/api/modifierProfil/{id}": {
+            "put": {
+                "summary": "Modifier le profil d'un user",
+                "operationId": "43488e86590da1b03f9092af530ec6e9",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID de l'utilisateur",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "succes"
+                    }
+                }
+            }
+        }
+    }
+}

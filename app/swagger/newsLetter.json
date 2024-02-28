@@ -1,0 +1,53 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "endPoind de news letter",
+        "version": "0.1"
+    },
+    "paths": {
+        "/api/voirNewsLetters": {
+            "get": {
+                "summary": "liste des newsLetters par l'admin",
+                "operationId": "b2992019ab063912fefc4aaae1a5d75e",
+                "responses": {
+                    "200": {
+                        "description": "succes"
+                    }
+                }
+            }
+        },
+        "/api/ajouterNewsLetter": {
+            "post": {
+                "summary": "Incription d'un news letter",
+                "operationId": "adc0fdf17d6ab8376b67b7bf703a147b",
+                "responses": {
+                    "201": {
+                        "description": "enregistrer avec succes"
+                    }
+                }
+            }
+        },
+        "/api/supprimerNewsLetter/{id}": {
+            "delete": {
+                "summary": "Supprimer un news letter par l'admin",
+                "operationId": "6d8de215452a9cf656c4f97ff910948c",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID du news letter",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "succes"
+                    }
+                }
+            }
+        }
+    }
+}
